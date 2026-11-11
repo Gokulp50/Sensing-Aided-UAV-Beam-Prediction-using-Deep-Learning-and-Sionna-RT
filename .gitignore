@@ -20,3 +20,6 @@ datasets/
 # --- Codex / IDE Configs ---
 .vscode/
 .idea/
+
+PROJECT_ROADMAP.md
+README_full_future_model.md
