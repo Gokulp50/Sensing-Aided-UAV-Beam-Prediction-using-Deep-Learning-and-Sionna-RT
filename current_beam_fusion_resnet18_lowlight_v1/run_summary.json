@@ -1,0 +1,20 @@
+{
+  "task": "current-beam classification from synchronized RGB and 11 sensor features at time t",
+  "architecture": "ImageNet-pretrained ResNet-18 fine-tuned end-to-end + gated sensor encoder",
+  "augmentation_profile": "illumination_robust",
+  "split": "existing sequence-grouped split; no sequence crosses splits",
+  "split_rows": {
+    "test": 1623,
+    "train": 8134,
+    "val": 1630
+  },
+  "split_sequences": {
+    "test": 5,
+    "train": 26,
+    "val": 4
+  },
+  "checkpoint_selection": "validation Top-1 only; test evaluation intentionally skipped",
+  "best_epoch": 8,
+  "best_validation_top1": 0.762576699256897,
+  "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU"
+}

@@ -1,0 +1,22 @@
+# --- Python Virtual Environments ---
+.venv-sionna/
+venv/
+env/
+
+# --- Python Caches ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Dataset & Large Weights (Optional but recommended) ---
+*.pt
+*.pth
+*.mat
+*.zip
+*.h5
+data/
+datasets/
+
+# --- Codex / IDE Configs ---
+.vscode/
+.idea/

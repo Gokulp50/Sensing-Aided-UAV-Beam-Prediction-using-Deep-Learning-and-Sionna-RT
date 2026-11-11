@@ -1,0 +1,37 @@
+{
+  "model": "frozen ResNet-50 + 11-sensor encoder + learned reliability gate + GRU + beam-change prior",
+  "target": "next logged beam (t+1) after 8 prior samples",
+  "split": "existing sequence-level split",
+  "window_counts": {
+    "train": 7942,
+    "val": 1604,
+    "test": 1583
+  },
+  "best_epoch": 11,
+  "condition_thresholds_from_train": {
+    "speed_median": 2.0579848000000003,
+    "altitude_median": 1282.07726
+  },
+  "change_calibration": {
+    "temperature": 0.75,
+    "bias": 0.5
+  },
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+  "test_metrics": {
+    "top1_accuracy": 0.6879342794418335,
+    "top3_accuracy": 0.9096651673316956,
+    "top5_accuracy": 0.960202157497406,
+    "macro_f1": 0.48134490847587585,
+    "split": "test",
+    "model": "reliability_gated_camera_sensor_next_beam",
+    "n": 1583,
+    "persistence_top1_same_windows": 0.6860391661402401,
+    "mean_power_regret_db": 0.05575704512386192,
+    "persistence_mean_power_regret_db": 0.054681857070440695,
+    "samples_with_power": 1583,
+    "best_epoch": 11,
+    "training_seconds": 42.88487519999762
+  },
+  "note": "Test set evaluated once after validation model selection; persistence evaluated on the same future windows."
+}

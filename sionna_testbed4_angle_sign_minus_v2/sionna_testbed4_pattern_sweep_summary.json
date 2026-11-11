@@ -1,0 +1,203 @@
+{
+  "status": "success",
+  "study_type": "Sionna simulation with supplied Testbed 4 angular-pattern table; assumption study only",
+  "scene": "Sionna integrated Munich scene; not Scenario 23 geometry",
+  "frequency_hz": 60000000000.0,
+  "codebook_csv": "C:\\Users\\gokul\\Documents\\Codex\\2026-11-01\\referenced-chatgpt-conversation-this-is-an\\outputs\\sionna_measured_codebook_testbed4.csv",
+  "codebook_beams": 64,
+  "angle_samples_per_beam": 211,
+  "codebook_pattern_interpretation": "relative power gain in one angular cut, used as a lookup; not complex array weights",
+  "angle_mapping": {
+    "source": "Sionna paths.phi_r arrival azimuth",
+    "angle_sign": -1.0,
+    "negative_sign_behavior": "reflect folded measured-cut angle as 180 degrees minus angle",
+    "angle_offset_deg": 0.0,
+    "folded_to_measured_cut_deg": [
+      -4.0,
+      176.0
+    ],
+    "out_of_range_behavior": "clamp to measured angular endpoints"
+  },
+  "power_estimator": "sum of per-path Sionna coefficient powers times interpolated measured pattern values; paths combined noncoherently",
+  "array_model": "single isotropic ports; measured patterns applied as external receive-beam lookup",
+  "transmitter_position_m": [
+    8.5,
+    21.0,
+    27.0
+  ],
+  "receiver_positions_m": [
+    [
+      42.0,
+      90.0,
+      1.5
+    ],
+    [
+      43.0,
+      90.0,
+      1.5
+    ],
+    [
+      44.0,
+      90.0,
+      1.5
+    ],
+    [
+      45.0,
+      90.0,
+      1.5
+    ],
+    [
+      46.0,
+      90.0,
+      1.5
+    ],
+    [
+      47.0,
+      90.0,
+      1.5
+    ],
+    [
+      48.0,
+      90.0,
+      1.5
+    ]
+  ],
+  "materials_with_frozen_frequency_properties": [
+    "marble",
+    "metal",
+    "brick",
+    "wood",
+    "concrete"
+  ],
+  "path_angle_tensor_shape": [
+    7,
+    1,
+    5
+  ],
+  "path_delays_shape": [
+    7,
+    1,
+    5
+  ],
+  "position_results": [
+    {
+      "receiver_index": 0,
+      "receiver_position_m": [
+        42.0,
+        90.0,
+        1.5
+      ],
+      "valid_path_count": 5,
+      "best_beam_id_zero_based": 49,
+      "top3_beam_ids_zero_based": [
+        49,
+        47,
+        48
+      ],
+      "best_to_second_gap_db": 0.067974758926412
+    },
+    {
+      "receiver_index": 1,
+      "receiver_position_m": [
+        43.0,
+        90.0,
+        1.5
+      ],
+      "valid_path_count": 4,
+      "best_beam_id_zero_based": 49,
+      "top3_beam_ids_zero_based": [
+        49,
+        50,
+        48
+      ],
+      "best_to_second_gap_db": 0.01349926066884317
+    },
+    {
+      "receiver_index": 2,
+      "receiver_position_m": [
+        44.0,
+        90.0,
+        1.5
+      ],
+      "valid_path_count": 4,
+      "best_beam_id_zero_based": 50,
+      "top3_beam_ids_zero_based": [
+        50,
+        52,
+        49
+      ],
+      "best_to_second_gap_db": 0.03281543150595797
+    },
+    {
+      "receiver_index": 3,
+      "receiver_position_m": [
+        45.0,
+        90.0,
+        1.5
+      ],
+      "valid_path_count": 4,
+      "best_beam_id_zero_based": 52,
+      "top3_beam_ids_zero_based": [
+        52,
+        50,
+        51
+      ],
+      "best_to_second_gap_db": 0.17889491564990492
+    },
+    {
+      "receiver_index": 4,
+      "receiver_position_m": [
+        46.0,
+        90.0,
+        1.5
+      ],
+      "valid_path_count": 5,
+      "best_beam_id_zero_based": 52,
+      "top3_beam_ids_zero_based": [
+        52,
+        53,
+        50
+      ],
+      "best_to_second_gap_db": 0.17286260635788583
+    },
+    {
+      "receiver_index": 5,
+      "receiver_position_m": [
+        47.0,
+        90.0,
+        1.5
+      ],
+      "valid_path_count": 5,
+      "best_beam_id_zero_based": 53,
+      "top3_beam_ids_zero_based": [
+        53,
+        52,
+        50
+      ],
+      "best_to_second_gap_db": 0.028027849528234183
+    },
+    {
+      "receiver_index": 6,
+      "receiver_position_m": [
+        48.0,
+        90.0,
+        1.5
+      ],
+      "valid_path_count": 5,
+      "best_beam_id_zero_based": 53,
+      "top3_beam_ids_zero_based": [
+        53,
+        52,
+        50
+      ],
+      "best_to_second_gap_db": 0.15652488956133384
+    }
+  ],
+  "limitations": [
+    "Munich scene and coordinates are not aligned to Scenario 23.",
+    "The angular cut's boresight, azimuth direction, and mounting orientation have not been calibrated; use --angle-offset-deg only for sensitivity analysis until verified.",
+    "Elevation response is omitted; this is a one-dimensional angular-pattern lookup.",
+    "The pattern samples are treated as relative power gains and path powers are combined noncoherently.",
+    "Do not report these beam rankings as measured accuracy or use them as Scenario 23 labels without confirming codebook provenance and beam ordering."
+  ]
+}

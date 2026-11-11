@@ -1,0 +1,30 @@
+{
+  "status": "success",
+  "scene": "Sionna integrated Munich scene (software demonstration only)",
+  "frequency_hz": 28000000000.0,
+  "array": "1x8 transmit ULA; single isotropic receive antenna",
+  "codebook": "8-candidate DFT codebook; illustrative only",
+  "transmitter_position_m": [
+    8.5,
+    21.0,
+    27.0
+  ],
+  "receiver_position_m": [
+    45.0,
+    90.0,
+    1.5
+  ],
+  "path_count": 4,
+  "path_delays_shape": [
+    1,
+    1,
+    4
+  ],
+  "best_beam_id": 0,
+  "top3_beam_ids": [
+    0,
+    1,
+    5
+  ],
+  "note": "Synthetic codebook and Munich scene are not aligned to DeepSense Scenario 23. These are simulated relative link powers, not measured beam accuracy or project results."
+}

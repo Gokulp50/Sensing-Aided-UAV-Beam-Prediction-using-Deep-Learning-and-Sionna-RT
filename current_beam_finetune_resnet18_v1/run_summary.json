@@ -1,0 +1,36 @@
+{
+  "task": "current-beam classification from one synchronized RGB image at time t",
+  "architecture": "ImageNet-pretrained ResNet-18 fine-tuned end-to-end",
+  "split": "existing sequence-grouped split; no sequence crosses splits",
+  "split_rows": {
+    "test": 1623,
+    "train": 8134,
+    "val": 1630
+  },
+  "split_sequences": {
+    "test": 5,
+    "train": 26,
+    "val": 4
+  },
+  "checkpoint_selection": "validation Top-1 accuracy",
+  "test_metrics": {
+    "model": "fine_tuned_resnet18_current_beam",
+    "split": "test",
+    "n": 1623,
+    "top1_accuracy": 0.6950092315673828,
+    "top3_accuracy": 0.9285274147987366,
+    "top5_accuracy": 0.9673444032669067,
+    "macro_f1_present_classes": 0.398125022649765,
+    "classes_present": 42,
+    "top1_power_regret_db": 0.049967125052780066,
+    "top3_power_regret_db": 0.007571791023257468,
+    "top5_power_regret_db": 0.0036869526097991047,
+    "samples_with_power": 1623,
+    "best_epoch": 3,
+    "training_seconds": 1001.0308484999987,
+    "top1_accuracy_on_persistence_subset": 0.6946847960444994,
+    "persistence_top1_same_samples": 0.6854140914709518,
+    "persistence_comparable_n": 1618
+  },
+  "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU"
+}

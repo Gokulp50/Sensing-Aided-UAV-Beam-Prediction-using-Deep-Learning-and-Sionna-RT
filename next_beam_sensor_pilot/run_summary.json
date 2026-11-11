@@ -1,0 +1,26 @@
+{
+  "experiment": "sensor-only future-beam pilot",
+  "target": "beam at t+1 after 8 within-sequence logged samples",
+  "features": [
+    "latitude",
+    "longitude",
+    "speed",
+    "altitude",
+    "distance",
+    "height",
+    "x_speed",
+    "y_speed",
+    "z_speed",
+    "pitch",
+    "roll"
+  ],
+  "split_policy": "existing sequence-level train/val/test split; scaler fit on train only",
+  "train_windows": 7942,
+  "val_windows": 1604,
+  "test_windows": 1583,
+  "epochs": 65,
+  "training_seconds": 0.5066635999974096,
+  "validation_tuned_change_temperature": 1.5,
+  "validation_tuned_change_bias": -0.4,
+  "scope_note": "This is a CPU sensor-only pilot, not the proposed camera+sensor gated-GRU model."
+}

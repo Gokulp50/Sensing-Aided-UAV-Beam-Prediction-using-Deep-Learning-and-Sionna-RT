@@ -1,0 +1,124 @@
+{
+  "task": "robustness of current-beam camera/sensor fusion under controlled input degradation",
+  "checkpoint": "C:\\Users\\gokul\\Documents\\Codex\\2026-11-01\\referenced-chatgpt-conversation-this-is-an\\outputs\\current_beam_fusion_resnet18_v1\\best_model.pt",
+  "split": "existing sequence-grouped held-out test split",
+  "test_samples": 1623,
+  "conditions": [
+    "clean",
+    "gps_noise_5m",
+    "gps_noise_15m",
+    "gps_missing",
+    "motion_missing",
+    "all_sensors_missing",
+    "blur_r1_5",
+    "lowlight_0_5",
+    "blur_lowlight"
+  ],
+  "notes": [
+    "GPS noise is independent Gaussian position error with the stated metre standard deviation.",
+    "Missing standardized sensor values are set to zero, equivalent to training-mean imputation.",
+    "Blur uses PIL Gaussian blur radius 1.5; low-light uses brightness factor 0.5.",
+    "Degraded test inputs are diagnostic only; no retraining or threshold tuning is performed."
+  ],
+  "results": [
+    {
+      "condition": "clean",
+      "samples": 1623,
+      "top1_accuracy": 0.7085643869377696,
+      "top3_accuracy": 0.9476278496611213,
+      "top5_accuracy": 0.9802834257547751,
+      "macro_f1_present_classes": 0.4383419657795618,
+      "top1_accuracy_delta_pp_vs_clean": 0.0,
+      "top3_accuracy_delta_pp_vs_clean": 0.0,
+      "top5_accuracy_delta_pp_vs_clean": 0.0
+    },
+    {
+      "condition": "gps_noise_5m",
+      "samples": 1623,
+      "top1_accuracy": 0.7079482439926063,
+      "top3_accuracy": 0.9476278496611213,
+      "top5_accuracy": 0.9802834257547751,
+      "macro_f1_present_classes": 0.43826552342922787,
+      "top1_accuracy_delta_pp_vs_clean": -0.06161429451633227,
+      "top3_accuracy_delta_pp_vs_clean": 0.0,
+      "top5_accuracy_delta_pp_vs_clean": 0.0
+    },
+    {
+      "condition": "gps_noise_15m",
+      "samples": 1623,
+      "top1_accuracy": 0.707332101047443,
+      "top3_accuracy": 0.9482439926062847,
+      "top5_accuracy": 0.9802834257547751,
+      "macro_f1_present_classes": 0.4378374373493979,
+      "top1_accuracy_delta_pp_vs_clean": -0.12322858903265343,
+      "top3_accuracy_delta_pp_vs_clean": 0.06161429451633227,
+      "top5_accuracy_delta_pp_vs_clean": 0.0
+    },
+    {
+      "condition": "gps_missing",
+      "samples": 1623,
+      "top1_accuracy": 0.7110289587184226,
+      "top3_accuracy": 0.9476278496611213,
+      "top5_accuracy": 0.9802834257547751,
+      "macro_f1_present_classes": 0.44305687072832584,
+      "top1_accuracy_delta_pp_vs_clean": 0.24645717806530687,
+      "top3_accuracy_delta_pp_vs_clean": 0.0,
+      "top5_accuracy_delta_pp_vs_clean": 0.0
+    },
+    {
+      "condition": "motion_missing",
+      "samples": 1623,
+      "top1_accuracy": 0.7067159581022797,
+      "top3_accuracy": 0.9470117067159581,
+      "top5_accuracy": 0.9802834257547751,
+      "macro_f1_present_classes": 0.43219776991887665,
+      "top1_accuracy_delta_pp_vs_clean": -0.1848428835489857,
+      "top3_accuracy_delta_pp_vs_clean": -0.061614294516321166,
+      "top5_accuracy_delta_pp_vs_clean": 0.0
+    },
+    {
+      "condition": "all_sensors_missing",
+      "samples": 1623,
+      "top1_accuracy": 0.7079482439926063,
+      "top3_accuracy": 0.9439309919901417,
+      "top5_accuracy": 0.9802834257547751,
+      "macro_f1_present_classes": 0.4373077049449191,
+      "top1_accuracy_delta_pp_vs_clean": -0.06161429451633227,
+      "top3_accuracy_delta_pp_vs_clean": -0.3696857670979603,
+      "top5_accuracy_delta_pp_vs_clean": 0.0
+    },
+    {
+      "condition": "blur_r1_5",
+      "samples": 1623,
+      "top1_accuracy": 0.7079482439926063,
+      "top3_accuracy": 0.9439309919901417,
+      "top5_accuracy": 0.9790511398644486,
+      "macro_f1_present_classes": 0.4233523102381135,
+      "top1_accuracy_delta_pp_vs_clean": -0.06161429451633227,
+      "top3_accuracy_delta_pp_vs_clean": -0.3696857670979603,
+      "top5_accuracy_delta_pp_vs_clean": -0.12322858903265343
+    },
+    {
+      "condition": "lowlight_0_5",
+      "samples": 1623,
+      "top1_accuracy": 0.25693160813308685,
+      "top3_accuracy": 0.4627233518176217,
+      "top5_accuracy": 0.5723967960566851,
+      "macro_f1_present_classes": 0.12433638106738189,
+      "top1_accuracy_delta_pp_vs_clean": -45.16327788046827,
+      "top3_accuracy_delta_pp_vs_clean": -48.49044978434996,
+      "top5_accuracy_delta_pp_vs_clean": -40.788662969808996
+    },
+    {
+      "condition": "blur_lowlight",
+      "samples": 1623,
+      "top1_accuracy": 0.14356130622304375,
+      "top3_accuracy": 0.33887861983980283,
+      "top5_accuracy": 0.4331484904497844,
+      "macro_f1_present_classes": 0.10125403331864347,
+      "top1_accuracy_delta_pp_vs_clean": -56.50030807147258,
+      "top3_accuracy_delta_pp_vs_clean": -60.87492298213185,
+      "top5_accuracy_delta_pp_vs_clean": -54.71349353049908
+    }
+  ]
+}

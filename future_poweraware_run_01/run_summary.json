@@ -1,0 +1,32 @@
+{
+  "model": "power-aware fine-tune of reliability-gated camera/sensor GRU",
+  "validation_selection": "minimum mean power regret after scanning model top-5 candidates",
+  "power_loss": {
+    "listwise_weight": 0.6,
+    "expected_regret_weight": 0.05,
+    "changed_label_weight": 0.25,
+    "target_temperature_db": 0.75
+  },
+  "best_epoch": 6,
+  "validation_best_top5_regret_db": 0.007183772035667724,
+  "test_metrics": {
+    "split": "test",
+    "n": 1583,
+    "best_epoch": 6,
+    "persistence_top1": 0.6860391661402401,
+    "training_seconds": 32.30340029999934,
+    "persistence_top1_power_regret_db": 0.05468185549685455,
+    "persistence_within_0_01db_fraction": 0.706253948199621,
+    "top1_accuracy": 0.6841440200805664,
+    "top3_accuracy": 0.9191408753395081,
+    "top5_accuracy": 0.9557801485061646,
+    "macro_f1": 0.47292637825012207,
+    "top1_power_regret_db": 0.059744024613962776,
+    "top1_within_0_01db_fraction": 0.704358812381554,
+    "top3_power_regret_db": 0.009357058921439393,
+    "top3_within_0_01db_fraction": 0.9317751105495894,
+    "top5_power_regret_db": 0.004379781940863694,
+    "top5_within_0_01db_fraction": 0.9646241313960834
+  },
+  "test_evaluated_once": true
+}

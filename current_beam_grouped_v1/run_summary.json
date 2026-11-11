@@ -1,0 +1,102 @@
+{
+  "task": "current-beam classification: predict beam at time t from camera embedding and sensors at time t",
+  "split": "existing sequence-grouped train/validation/test assignment",
+  "split_rows": {
+    "test": 1623,
+    "train": 8134,
+    "val": 1630
+  },
+  "split_sequences": {
+    "test": 5,
+    "train": 26,
+    "val": 4
+  },
+  "window": 1,
+  "modalities": [
+    "visual_only",
+    "sensor_only",
+    "gated_multimodal"
+  ],
+  "checkpoint_selection": "validation Top-1 accuracy",
+  "test_evaluation": "used only after each model was selected on validation; no test-driven tuning",
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+  "persistence_test_samples": 1618,
+  "test_metrics": [
+    {
+      "model": "visual_only",
+      "split": "test",
+      "n": 1623,
+      "top1_accuracy": 0.4528650641441345,
+      "top3_accuracy": 0.7609365582466125,
+      "top5_accuracy": 0.8798521161079407,
+      "macro_f1_present_classes": 0.2096511572599411,
+      "classes_present": 42,
+      "top1_power_regret_db": 0.8558291285000602,
+      "top3_power_regret_db": 0.21294915677651913,
+      "top5_power_regret_db": 0.09635828383435381,
+      "samples_with_power": 1623,
+      "top1_accuracy_on_persistence_subset": 0.4530284301606922,
+      "persistence_comparable_n": 1618,
+      "best_epoch": 21,
+      "training_seconds": 24.903062799996405,
+      "mean_visual_gate": 1.0,
+      "mean_sensor_gate": 0.0
+    },
+    {
+      "model": "sensor_only",
+      "split": "test",
+      "n": 1623,
+      "top1_accuracy": 0.45348119735717773,
+      "top3_accuracy": 0.7751078009605408,
+      "top5_accuracy": 0.8823167085647583,
+      "macro_f1_present_classes": 0.14755921065807343,
+      "classes_present": 42,
+      "top1_power_regret_db": 0.8516385499367543,
+      "top3_power_regret_db": 0.21229439972530942,
+      "top5_power_regret_db": 0.06488450752538785,
+      "samples_with_power": 1623,
+      "top1_accuracy_on_persistence_subset": 0.4542645241038319,
+      "persistence_comparable_n": 1618,
+      "best_epoch": 20,
+      "training_seconds": 9.655270000002929,
+      "mean_visual_gate": 0.0,
+      "mean_sensor_gate": 1.0
+    },
+    {
+      "model": "gated_multimodal",
+      "split": "test",
+      "n": 1623,
+      "top1_accuracy": 0.4996919333934784,
+      "top3_accuracy": 0.7837338447570801,
+      "top5_accuracy": 0.8853974342346191,
+      "macro_f1_present_classes": 0.23742541670799255,
+      "classes_present": 42,
+      "top1_power_regret_db": 0.6774373513243336,
+      "top3_power_regret_db": 0.17320911266389205,
+      "top5_power_regret_db": 0.09194668893784,
+      "samples_with_power": 1623,
+      "top1_accuracy_on_persistence_subset": 0.5,
+      "persistence_comparable_n": 1618,
+      "best_epoch": 19,
+      "training_seconds": 10.23326359999919,
+      "mean_visual_gate": 0.8005609512329102,
+      "mean_sensor_gate": 0.19943906366825104
+    },
+    {
+      "model": "persistence_previous_beam",
+      "split": "test",
+      "n": 1618,
+      "samples_with_power": 0,
+      "top1_accuracy": 0.6854140914709518,
+      "top3_accuracy": NaN,
+      "top5_accuracy": NaN,
+      "macro_f1_present_classes": NaN,
+      "classes_present": 42,
+      "top1_power_regret_db": NaN,
+      "top3_power_regret_db": NaN,
+      "top5_power_regret_db": NaN
+    }
+  ],
+  "caution": "Scores from current-beam classification are not directly comparable to next-beam forecasting scores."
+}

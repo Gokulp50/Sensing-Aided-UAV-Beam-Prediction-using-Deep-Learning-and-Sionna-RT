@@ -1,0 +1,2 @@
+top1_accuracy,top3_accuracy,top5_accuracy,macro_f1,split,model,n,persistence_top1_same_windows,mean_power_regret_db,persistence_mean_power_regret_db,samples_with_power,best_epoch,training_seconds
+0.6879342794418335,0.9096651673316956,0.960202157497406,0.48134490847587585,test,reliability_gated_camera_sensor_next_beam,1583,0.6860391661402401,0.05575704512386192,0.054681857070440695,1583,11,42.88487519999762

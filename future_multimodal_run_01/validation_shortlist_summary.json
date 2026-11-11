@@ -1,0 +1,50 @@
+{
+  "split": "validation only",
+  "rows": 1604,
+  "decision_rule": "best measured power among each model top-K shortlist",
+  "selected_change_temperature": 0.75,
+  "selected_change_bias": 0.5,
+  "metrics": [
+    {
+      "policy": "model_top1",
+      "beams_scanned": 1,
+      "scan_fraction_of_64": 0.015625,
+      "topk_label_accuracy": 0.6970074772834778,
+      "mean_power_regret_db": 0.08562550642632798,
+      "median_power_regret_db": 0.0,
+      "power_within_0_01db_fraction": 0.7213216957605985,
+      "samples": 1604
+    },
+    {
+      "policy": "model_top3",
+      "beams_scanned": 3,
+      "scan_fraction_of_64": 0.046875,
+      "topk_label_accuracy": 0.881546139717102,
+      "mean_power_regret_db": 0.01976605130626878,
+      "median_power_regret_db": 0.0,
+      "power_within_0_01db_fraction": 0.8952618453865336,
+      "samples": 1604
+    },
+    {
+      "policy": "model_top5",
+      "beams_scanned": 5,
+      "scan_fraction_of_64": 0.078125,
+      "topk_label_accuracy": 0.9438902735710144,
+      "mean_power_regret_db": 0.008752111191051787,
+      "median_power_regret_db": 0.0,
+      "power_within_0_01db_fraction": 0.9507481296758105,
+      "samples": 1604
+    },
+    {
+      "policy": "persistence_1",
+      "beams_scanned": 1,
+      "scan_fraction_of_64": 0.015625,
+      "topk_label_accuracy": 0.6907730673316709,
+      "mean_power_regret_db": 0.07524217367265425,
+      "median_power_regret_db": 0.0,
+      "power_within_0_01db_fraction": 0.7150872817955112,
+      "samples": 1604
+    }
+  ],
+  "note": "Use this validation report to choose K; do not tune K from test results."
+}

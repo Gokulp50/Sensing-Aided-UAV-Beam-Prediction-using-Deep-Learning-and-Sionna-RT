@@ -1,0 +1,164 @@
+{
+  "status": "success",
+  "scene": "Sionna integrated Munich scene (software demonstration only)",
+  "frequency_hz": 28000000000.0,
+  "array": "1x8 transmit ULA; single isotropic receive antenna",
+  "codebook": "8-candidate illustrative DFT codebook",
+  "transmitter_position_m": [
+    8.5,
+    21.0,
+    27.0
+  ],
+  "fixed_transmitter_orientation": "toward midpoint of receiver line",
+  "receiver_positions_m": [
+    [
+      42.0,
+      90.0,
+      1.5
+    ],
+    [
+      43.0,
+      90.0,
+      1.5
+    ],
+    [
+      44.0,
+      90.0,
+      1.5
+    ],
+    [
+      45.0,
+      90.0,
+      1.5
+    ],
+    [
+      46.0,
+      90.0,
+      1.5
+    ],
+    [
+      47.0,
+      90.0,
+      1.5
+    ],
+    [
+      48.0,
+      90.0,
+      1.5
+    ]
+  ],
+  "path_count_dimension": 5,
+  "path_delays_shape": [
+    7,
+    1,
+    5
+  ],
+  "position_results": [
+    {
+      "receiver_index": 0,
+      "receiver_position_m": [
+        42.0,
+        90.0,
+        1.5
+      ],
+      "best_beam_id": 0,
+      "top3_beam_ids": [
+        0,
+        1,
+        7
+      ],
+      "best_to_second_gap_db": 12.763345020745984
+    },
+    {
+      "receiver_index": 1,
+      "receiver_position_m": [
+        43.0,
+        90.0,
+        1.5
+      ],
+      "best_beam_id": 0,
+      "top3_beam_ids": [
+        0,
+        1,
+        7
+      ],
+      "best_to_second_gap_db": 20.260264788917976
+    },
+    {
+      "receiver_index": 2,
+      "receiver_position_m": [
+        44.0,
+        90.0,
+        1.5
+      ],
+      "best_beam_id": 0,
+      "top3_beam_ids": [
+        0,
+        1,
+        5
+      ],
+      "best_to_second_gap_db": 18.012639690382777
+    },
+    {
+      "receiver_index": 3,
+      "receiver_position_m": [
+        45.0,
+        90.0,
+        1.5
+      ],
+      "best_beam_id": 0,
+      "top3_beam_ids": [
+        0,
+        1,
+        5
+      ],
+      "best_to_second_gap_db": 19.27183663266333
+    },
+    {
+      "receiver_index": 4,
+      "receiver_position_m": [
+        46.0,
+        90.0,
+        1.5
+      ],
+      "best_beam_id": 0,
+      "top3_beam_ids": [
+        0,
+        2,
+        1
+      ],
+      "best_to_second_gap_db": 19.34143891499825
+    },
+    {
+      "receiver_index": 5,
+      "receiver_position_m": [
+        47.0,
+        90.0,
+        1.5
+      ],
+      "best_beam_id": 0,
+      "top3_beam_ids": [
+        0,
+        7,
+        1
+      ],
+      "best_to_second_gap_db": 20.493503109430982
+    },
+    {
+      "receiver_index": 6,
+      "receiver_position_m": [
+        48.0,
+        90.0,
+        1.5
+      ],
+      "best_beam_id": 0,
+      "top3_beam_ids": [
+        0,
+        7,
+        2
+      ],
+      "best_to_second_gap_db": 22.121723240625172
+    }
+  ],
+  "note": "Synthetic Munich-scene spatial demonstration only. The codebook, array assumptions, and coordinates are not aligned to DeepSense Scenario 23; results are not measured beam accuracy or project results."
+}

@@ -1,0 +1,22 @@
+{
+  "status": "success",
+  "scene": "Sionna integrated Munich scene (software demonstration only)",
+  "frequency_hz": 28000000000.0,
+  "mitsuba_variant": "cuda_ad_mono_polarized",
+  "channel_coefficients_shape": [
+    1,
+    2,
+    1,
+    1,
+    4,
+    1
+  ],
+  "path_delays_shape": [
+    1,
+    1,
+    4
+  ],
+  "path_count": 4,
+  "cir_coefficient_energy_diagnostic": 9.976686143886582e-10,
+  "note": "Not geographically aligned to DeepSense Scenario 23; not a project accuracy result."
+}

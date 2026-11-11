@@ -1,0 +1,2 @@
+model,split,n,top1_accuracy,top3_accuracy,top5_accuracy,macro_f1_present_classes,classes_present,top1_power_regret_db,top3_power_regret_db,top5_power_regret_db,samples_with_power,best_epoch,training_seconds,top1_accuracy_on_persistence_subset,persistence_top1_same_samples,persistence_comparable_n
+fine_tuned_resnet18_current_beam,test,1623,0.6950092315673828,0.9285274147987366,0.9673444032669067,0.398125022649765,42,0.049967125052780066,0.007571791023257468,0.0036869526097991047,1623,3,1001.0308484999987,0.6946847960444994,0.6854140914709518,1618
